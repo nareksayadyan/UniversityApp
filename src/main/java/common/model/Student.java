@@ -1,7 +1,7 @@
-package java.common.model;
+package common.model;
 
-import java.common.model.type.StudySemester;
-import java.common.model.type.StudyYear;
+import common.model.type.StudySemester;
+import common.model.type.StudyYear;
 
 /**
  * Created by Narek Sayadyan on 09.11.2016.
