@@ -13,11 +13,11 @@ public class Test {
     }
     public void register(String u, String p) {
         RegisterController registerController = new RegisterController();
-        try {
-            registerController.registerStudent(u, p);
-        } catch (UniversityAppException e) {
-            e.printStackTrace();
-            System.out.println(e);
-        }
+//        try {
+//            registerController.registerStudent(u, p);
+//        } catch (UniversityAppException e) {
+//            e.printStackTrace();
+//            System.out.println(e);
+//        }
     }
 }

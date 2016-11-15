@@ -16,6 +16,7 @@ public class Student {
     private StudyYear studyYear;
     private StudySemester studySession;
     private int groupNumber;
+//    private Faculty faculty
 
     public Student() {
 
@@ -24,6 +25,17 @@ public class Student {
     public Student(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySession, int groupNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.eMail = eMail;
+        this.studyYear = studyYear;
+        this.studySession = studySession;
+        this.groupNumber = groupNumber;
     }
 
     public int getStudentId() {

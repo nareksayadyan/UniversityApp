@@ -1,12 +1,12 @@
 package repository.implementations;
 
 import common.model.Professor;
-import repository.interfaces.ProfessorRepositoryInterface;
+import repository.interfaces.ProfessorRepository;
 
 /**
  * Created by Narek Sayadyan on 10.11.2016.
  */
-public class ProfessorRepository implements ProfessorRepositoryInterface {
+public class ProfessorRepositoryImpl implements ProfessorRepository {
 
     @Override
     public Professor create(Professor obj) {

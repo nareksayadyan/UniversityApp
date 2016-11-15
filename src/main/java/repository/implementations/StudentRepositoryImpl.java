@@ -1,15 +1,22 @@
 package repository.implementations;
 
 import common.model.Student;
-import repository.interfaces.UserRepositoryInterface;
+import repository.interfaces.StudentRepository;
 
 /**
  * Created by Narek on 09.11.2016.
  */
-public class UserRepository implements UserRepositoryInterface {
+public class StudentRepositoryImpl implements StudentRepository {
+
+
 
     @Override
     public Student create(Student obj) {
+
+
+
+
+
         return null;
     }
 
@@ -21,6 +28,8 @@ public class UserRepository implements UserRepositoryInterface {
     @Override
     public Student read(String username) {
 
+
+        System.out.println("oooo");
 
 
         return null;
