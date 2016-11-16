@@ -1,6 +1,6 @@
-package repository.interfaces;
+package am.tteni.univer.repository.interfaces;
 
-import common.model.Student;
+import am.tteni.univer.common.model.Student;
 
 /**
  * Created by Narek on 09.11.2016.

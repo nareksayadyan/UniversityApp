@@ -1,7 +1,7 @@
-package repository.implementations;
+package am.tteni.univer.repository.implementations;
 
-import common.model.Student;
-import repository.interfaces.StudentRepository;
+import am.tteni.univer.common.model.Student;
+import am.tteni.univer.repository.interfaces.StudentRepository;
 
 /**
  * Created by Narek on 09.11.2016.

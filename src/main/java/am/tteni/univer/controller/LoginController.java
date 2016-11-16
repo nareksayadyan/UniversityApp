@@ -1,8 +1,8 @@
-package controller;
+package am.tteni.univer.controller;
 
-import common.model.Student;
-import repository.implementations.StudentRepositoryImpl;
-import repository.interfaces.StudentRepository;
+import am.tteni.univer.common.model.Student;
+import am.tteni.univer.repository.implementations.StudentRepositoryImpl;
+import am.tteni.univer.repository.interfaces.StudentRepository;
 
 /**
  * Created by Narek on 09.11.2016.

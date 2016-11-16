@@ -1,7 +1,7 @@
-package repository.implementations;
+package am.tteni.univer.repository.implementations;
 
-import common.model.Professor;
-import repository.interfaces.ProfessorRepository;
+import am.tteni.univer.common.model.Professor;
+import am.tteni.univer.repository.interfaces.ProfessorRepository;
 
 /**
  * Created by Narek Sayadyan on 10.11.2016.

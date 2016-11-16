@@ -1,7 +1,7 @@
-package common.model;
+package am.tteni.univer.common.model;
 
-import common.model.type.StudySemester;
-import common.model.type.StudyYear;
+import am.tteni.univer.common.model.type.StudySemester;
+import am.tteni.univer.common.model.type.StudyYear;
 
 /**
  * Created by Narek Sayadyan on 09.11.2016.

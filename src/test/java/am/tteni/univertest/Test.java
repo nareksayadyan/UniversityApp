@@ -1,5 +1,6 @@
-import common.universityexception.UniversityAppException;
-import controller.RegisterController;
+package am.tteni.univertest;
+
+import am.tteni.univer.controller.RegisterController;
 
 /**
  * Created by Narek on 10.11.2016.

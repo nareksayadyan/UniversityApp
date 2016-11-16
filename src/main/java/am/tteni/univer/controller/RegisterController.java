@@ -1,11 +1,11 @@
-package controller;
+package am.tteni.univer.controller;
 
-import common.model.Student;
-import common.model.type.StudySemester;
-import common.model.type.StudyYear;
-import common.universityexception.UniversityAppException;
-import repository.implementations.StudentRepositoryImpl;
-import repository.interfaces.StudentRepository;
+import am.tteni.univer.common.model.Student;
+import am.tteni.univer.common.model.type.StudySemester;
+import am.tteni.univer.common.model.type.StudyYear;
+import am.tteni.univer.common.universityexception.UniversityAppException;
+import am.tteni.univer.repository.implementations.StudentRepositoryImpl;
+import am.tteni.univer.repository.interfaces.StudentRepository;
 
 /**
  * Created by Narek on 09.11.2016.

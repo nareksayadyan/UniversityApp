@@ -1,4 +1,4 @@
-package common.universityexception;
+package am.tteni.univer.common.universityexception;
 
 /**
  * Created by Narek on 10.11.2016.
