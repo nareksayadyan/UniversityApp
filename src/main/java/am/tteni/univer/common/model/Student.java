@@ -7,6 +7,7 @@ import am.tteni.univer.common.model.type.StudyYear;
  * Created by Narek Sayadyan on 09.11.2016.
  */
 public class Student {
+
     private int studentId;
     private String firstName;
     private String lastName;
@@ -16,7 +17,6 @@ public class Student {
     private StudyYear studyYear;
     private StudySemester studySession;
     private int groupNumber;
-//    private Faculty faculty
 
     public Student() {
 
@@ -27,7 +27,7 @@ public class Student {
         this.password = password;
     }
 
-    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySession, int groupNumber) {
+    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySession) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
@@ -35,7 +35,6 @@ public class Student {
         this.eMail = eMail;
         this.studyYear = studyYear;
         this.studySession = studySession;
-        this.groupNumber = groupNumber;
     }
 
     public int getStudentId() {
