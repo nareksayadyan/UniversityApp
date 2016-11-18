@@ -1,6 +1,7 @@
 package am.tteni.univer.repository.implementations;
 
 import am.tteni.univer.common.model.Professor;
+import am.tteni.univer.common.universityexception.UniversityAppException;
 import am.tteni.univer.repository.interfaces.ProfessorRepository;
 
 /**
@@ -16,6 +17,12 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
     @Override
     public Professor read(Professor obj) {
         return null;
+    }
+
+    @Override
+    public boolean read(String username, String eMail) throws UniversityAppException {
+//        throw new UniversityAppException("Username exist");
+        return false;
     }
 
     @Override

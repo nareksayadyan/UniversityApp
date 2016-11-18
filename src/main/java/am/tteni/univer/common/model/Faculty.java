@@ -1,16 +1,18 @@
 package am.tteni.univer.common.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Narek on 17.11.2016.
  */
 public class Faculty {
 
     private int facultyId;
-    private String facultyName;
-    private int universityId;
+    private int facultyNumber;
+    private ArrayList<Group> groups;
 
-    public Faculty(String facultyName) {
-        this.facultyName = facultyName;
+    public Faculty(int facultyNumber) {
+        this.facultyNumber = facultyNumber;
     }
 
     public int getFacultyId() {
@@ -21,19 +23,12 @@ public class Faculty {
         this.facultyId = facultyId;
     }
 
-    public String getFacultyName() {
-        return facultyName;
+    public int getFacultyNumber() {
+        return facultyNumber;
     }
 
-    public void setFacultyName(String facultyName) {
-        this.facultyName = facultyName;
+    public void setFacultyNumber(int facultyNumber) {
+        this.facultyNumber = facultyNumber;
     }
 
-    public int getUniversityId() {
-        return universityId;
-    }
-
-    public void setUniversityId(int universityId) {
-        this.universityId = universityId;
-    }
 }

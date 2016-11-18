@@ -1,6 +1,9 @@
 package am.tteni.univertest;
 
-import am.tteni.univer.controller.RegisterController;
+import am.tteni.univer.common.model.type.StudySemester;
+import am.tteni.univer.common.model.type.StudyYear;
+import am.tteni.univer.common.universityexception.UniversityAppException;
+import am.tteni.univer.controller.StudentController;
 
 /**
  * Created by Narek on 10.11.2016.
@@ -9,16 +12,19 @@ public class Test {
     public static void main(String[] args) {
 
         Test test = new Test();
-        test.register("testik1", "passtest1");
+
+        test.addStudent("Testik1", "Yan1", "test1", "pass1", "test1@a.a", StudyYear.FIRST, StudySemester.FIRST, 1);
 
     }
-    public void register(String u, String p) {
-        RegisterController registerController = new RegisterController();
-//        try {
-//            registerController.registerStudent(u, p);
-//        } catch (UniversityAppException e) {
-//            e.printStackTrace();
-//            System.out.println(e);
-//        }
+    public void addStudent(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupNumber) {
+        StudentController studentController = new StudentController();
+        try {
+            studentController.registerStudent(firstName, lastName, username, password, eMail, studyYear, studySemester, groupNumber);
+        } catch (UniversityAppException e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
     }
+
+
 }

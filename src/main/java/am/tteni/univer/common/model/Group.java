@@ -1,5 +1,7 @@
 package am.tteni.univer.common.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Narek on 17.11.2016.
  */
@@ -7,7 +9,7 @@ public class Group {
 
     private int groupId;
     private int number;
-    private int facultyId;
+    private ArrayList<Student> students;
 
     public Group(int number) {
         this.number = number;
@@ -29,11 +31,12 @@ public class Group {
         this.number = number;
     }
 
-    public int getFacultyId() {
-        return facultyId;
+    public ArrayList<Student> getStudents() {
+        return students;
     }
 
-    public void setFacultyId(int facultyId) {
-        this.facultyId = facultyId;
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
     }
+
 }

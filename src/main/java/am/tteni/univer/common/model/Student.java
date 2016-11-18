@@ -15,7 +15,7 @@ public class Student {
     private String password;
     private String eMail;
     private StudyYear studyYear;
-    private StudySemester studySession;
+    private StudySemester studySemester;
     private int groupNumber;
 
     public Student() {
@@ -27,14 +27,15 @@ public class Student {
         this.password = password;
     }
 
-    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySession) {
+    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
         this.eMail = eMail;
         this.studyYear = studyYear;
-        this.studySession = studySession;
+        this.studySemester = studySemester;
+        this.groupNumber = groupNumber;
     }
 
     public int getStudentId() {
@@ -93,12 +94,12 @@ public class Student {
         this.studyYear = studyYear;
     }
 
-    public StudySemester getStudySession() {
-        return studySession;
+    public StudySemester getStudySemester() {
+        return studySemester;
     }
 
-    public void setStudySession(StudySemester studySession) {
-        this.studySession = studySession;
+    public void setStudySemester(StudySemester studySemester) {
+        this.studySemester = studySemester;
     }
 
     public int getGroupNumber() {

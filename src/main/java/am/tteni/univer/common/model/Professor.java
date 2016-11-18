@@ -12,13 +12,16 @@ public class Professor {
     private String password;
     private String eMail;
 
+    public Professor() {
+
+    }
+
     public Professor(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public Professor(int professorId, String firstName, String lastName, String username, String password, String eMail) {
-        this.professorId = professorId;
+    public Professor(String firstName, String lastName, String username, String password, String eMail) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;

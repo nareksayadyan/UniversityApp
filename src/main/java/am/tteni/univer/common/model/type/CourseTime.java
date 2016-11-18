@@ -4,13 +4,16 @@ package am.tteni.univer.common.model.type;
  * Created by Narek on 17.11.2016.
  */
 public enum CourseTime {
+    FIRST(1),
+    SECOND(2),
+    THIRD(3),
+    FOURTH(4),
+    FIFTH(5),
+    SIXTH(6),
+    SEVENTH(7);
 
-    FIRST(0),
-    SECOND(1),
-    THIRD(2),
-    FOURTH(3);
+    private int value;
 
-    private final int value;
     CourseTime(int value) {
         this.value = value;
     }
@@ -18,5 +21,4 @@ public enum CourseTime {
     public int getValue() {
         return value;
     }
-
 }
