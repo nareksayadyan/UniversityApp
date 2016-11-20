@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class Faculty {
 
     private int facultyId;
-    private int facultyNumber;
+    private String facultyName;
     private ArrayList<Group> groups;
 
-    public Faculty(int facultyNumber) {
-        this.facultyNumber = facultyNumber;
+    public Faculty(String facultyName) {
+        this.facultyName = facultyName;
     }
 
     public int getFacultyId() {
@@ -23,12 +23,19 @@ public class Faculty {
         this.facultyId = facultyId;
     }
 
-    public int getFacultyNumber() {
-        return facultyNumber;
+    public String getFacultyName() {
+        return facultyName;
     }
 
-    public void setFacultyNumber(int facultyNumber) {
-        this.facultyNumber = facultyNumber;
+    public void setFacultyName(String facultyName) {
+        this.facultyName = facultyName;
     }
 
+    public ArrayList<Group> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(ArrayList<Group> groups) {
+        this.groups = groups;
+    }
 }

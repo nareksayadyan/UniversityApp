@@ -16,7 +16,6 @@ public class Course {
     private WeekDay weekDay;
     private CourseTime courseTime;
     private Professor professor;
-    private ArrayList<Group> groups;
 
     public Course() {
 
@@ -76,13 +75,5 @@ public class Course {
 
     public void setProfessor(Professor professor) {
         this.professor = professor;
-    }
-
-    public ArrayList<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
     }
 }

@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class Group {
 
     private int groupId;
-    private int number;
+    private int groupNumber;
     private ArrayList<Student> students;
 
-    public Group(int number) {
-        this.number = number;
+    public Group(int groupNumber) {
+        this.groupNumber = groupNumber;
     }
 
     public int getGroupId() {
@@ -23,12 +23,12 @@ public class Group {
         this.groupId = groupId;
     }
 
-    public int getNumber() {
-        return number;
+    public int getGroupNumber() {
+        return groupNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
     }
 
     public ArrayList<Student> getStudents() {

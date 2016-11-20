@@ -14,6 +14,8 @@ public class StudentController {
 
     StudentRepository studentRepository = new StudentRepositoryImpl();
 
+
+
     public void registerStudent(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupNumber) throws UniversityAppException {
         Student student = null;
         if (isFreeStudentUsernameEMail(username, eMail)) {

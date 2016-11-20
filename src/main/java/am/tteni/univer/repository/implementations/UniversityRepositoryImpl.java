@@ -1,12 +1,17 @@
 package am.tteni.univer.repository.implementations;
 
 import am.tteni.univer.common.model.University;
-import am.tteni.univer.repository.interfaces.UniversityReposirory;
+import am.tteni.univer.repository.interfaces.UniversityRepository;
 
 /**
  * Created by Narek Sayadyan on 18.11.2016.
  */
-public class UniversityReposiroryImpl implements UniversityReposirory {
+public class UniversityRepositoryImpl implements UniversityRepository {
+
+    @Override
+    public University read(String universityName) {
+        return null;
+    }
 
     @Override
     public University create(University obj) {
