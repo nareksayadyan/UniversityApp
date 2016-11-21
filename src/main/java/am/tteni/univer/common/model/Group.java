@@ -9,10 +9,16 @@ public class Group {
 
     private int groupId;
     private int groupNumber;
+    private int facultyId;
     private ArrayList<Student> students;
 
     public Group(int groupNumber) {
         this.groupNumber = groupNumber;
+    }
+
+    public Group(int groupNumber, int facultyId) {
+        this.groupNumber = groupNumber;
+        this.facultyId = facultyId;
     }
 
     public int getGroupId() {
@@ -29,6 +35,14 @@ public class Group {
 
     public void setGroupNumber(int groupNumber) {
         this.groupNumber = groupNumber;
+    }
+
+    public int getFacultyId() {
+        return facultyId;
+    }
+
+    public void setFacultyId(int facultyId) {
+        this.facultyId = facultyId;
     }
 
     public ArrayList<Student> getStudents() {

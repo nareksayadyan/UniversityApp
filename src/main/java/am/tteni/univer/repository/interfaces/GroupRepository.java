@@ -11,5 +11,5 @@ public interface GroupRepository extends CRUD<Group> {
 
     Group create(Group group, Faculty faculty);
 
-    Group read(int groupNumber, Faculty faculty) throws UniversityAppException;
+    Group read(int groupNumber, Faculty faculty);
 }

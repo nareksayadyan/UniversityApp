@@ -11,7 +11,7 @@ import am.tteni.univer.repository.interfaces.GroupRepository;
 public class GroupRepositoryImpl implements GroupRepository {
 
     @Override
-    public Group read(int groupNumber, Faculty faculty) throws UniversityAppException {
+    public Group read(int groupNumber, Faculty faculty) {
 //        throw new UniversityAppException("Group number exist in this faculty");
         return null;
     }
