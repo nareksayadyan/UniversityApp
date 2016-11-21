@@ -1,5 +1,6 @@
 package am.tteni.univer.repository.implementations;
 
+import am.tteni.univer.common.model.Group;
 import am.tteni.univer.common.model.Student;
 import am.tteni.univer.common.universityexception.UniversityAppException;
 import am.tteni.univer.repository.interfaces.StudentRepository;
@@ -8,6 +9,11 @@ import am.tteni.univer.repository.interfaces.StudentRepository;
  * Created by Narek on 09.11.2016.
  */
 public class StudentRepositoryImpl implements StudentRepository {
+
+    @Override
+    public void update(Student student, Group group) {
+
+    }
 
     @Override
     public Student create(Student obj) {

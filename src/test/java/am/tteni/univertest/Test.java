@@ -19,7 +19,7 @@ public class Test {
     public void addStudent(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupNumber) {
         StudentController studentController = new StudentController();
         try {
-            studentController.registerStudent(firstName, lastName, username, password, eMail, studyYear, studySemester, groupNumber);
+            studentController.addStudent(firstName, lastName, username, password, eMail, studyYear, studySemester);
         } catch (UniversityAppException e) {
             e.printStackTrace();
             System.out.println(e);

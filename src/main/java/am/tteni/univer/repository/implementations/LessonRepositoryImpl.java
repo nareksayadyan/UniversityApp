@@ -1,8 +1,8 @@
 package am.tteni.univer.repository.implementations;
 
+import am.tteni.univer.common.model.Course;
 import am.tteni.univer.common.model.Faculty;
 import am.tteni.univer.common.model.Group;
-import am.tteni.univer.common.model.Lesson;
 import am.tteni.univer.common.model.Student;
 import am.tteni.univer.repository.interfaces.LessonRepository;
 
@@ -14,37 +14,17 @@ import java.util.ArrayList;
 public class LessonRepositoryImpl implements LessonRepository {
 
     @Override
-    public ArrayList<Lesson> read(Student student) {
+    public ArrayList<Course> read(Student student) {
         return null;
     }
 
     @Override
-    public ArrayList<Lesson> read(Group group) {
+    public ArrayList<Course> read(Group group) {
         return null;
     }
 
     @Override
-    public ArrayList<Lesson> read(Faculty faculty) {
+    public ArrayList<Course> read(Faculty faculty) {
         return null;
-    }
-
-    @Override
-    public Lesson create(Lesson obj) {
-        return null;
-    }
-
-    @Override
-    public Lesson read(Lesson obj) {
-        return null;
-    }
-
-    @Override
-    public Lesson update(Lesson obj) {
-        return null;
-    }
-
-    @Override
-    public void delete(Lesson obj) {
-
     }
 }

@@ -31,10 +31,10 @@ public class UniversityController {
         return faculty;
     }
 
-    public Group createGroup(int groupNumber) {
-        Group group = new Group(groupNumber);
-        return group;
-    }
+//    public Group createGroup(int groupNumber) {
+//        Group group = new Group(groupNumber);
+//        return group;
+//    }
 
     public void addFacultyToUniversity(String facultyName, University university) throws UniversityAppException {
         if (isFreeFacultyName(facultyName, university)) {
@@ -47,8 +47,11 @@ public class UniversityController {
     }
 
     public void addGroupToFaculty(int groupNumber, Faculty faculty) throws UniversityAppException{
+        Group group = null;
         if (isFreeGroupNumber(groupNumber, faculty)) {
-            groupRepository.create(createGroup(groupNumber), faculty);
+            group = new Group(groupNumber);
+//            update
+            groupRepository.create(group, faculty);
         }
     }
 

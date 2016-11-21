@@ -1,5 +1,6 @@
 package am.tteni.univer.repository.interfaces;
 
+import am.tteni.univer.common.model.Group;
 import am.tteni.univer.common.model.Student;
 import am.tteni.univer.common.universityexception.UniversityAppException;
 
@@ -9,5 +10,4 @@ import am.tteni.univer.common.universityexception.UniversityAppException;
 public interface StudentRepository extends CRUD<Student> {
 
     boolean read(String username, String eMail) throws UniversityAppException;
-
 }

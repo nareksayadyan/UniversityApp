@@ -12,7 +12,7 @@ public class ProfessorController {
 
     ProfessorRepository professorRepository = new ProfessorRepositoryImpl();
 
-    public void registerProfessor(String firstName, String lastName, String username, String password, String eMail) throws UniversityAppException {
+    public void addProfessor(String firstName, String lastName, String username, String password, String eMail) throws UniversityAppException {
         Professor professor = null;
         if (isFreeProfessorUsernameEMail(username, eMail)) {
             professor = new Professor(firstName, lastName, username, password, eMail);
