@@ -15,6 +15,11 @@ public class University {
         this.universityName = universityName;
     }
 
+    public University(int universityId, String universityName) {
+        this.universityId = universityId;
+        this.universityName = universityName;
+    }
+
     public int getUniversityId() {
         return universityId;
     }
