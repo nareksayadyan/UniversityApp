@@ -2,8 +2,9 @@ package am.tteni.univer.repository.implementations;
 
 import am.tteni.univer.common.model.Group;
 import am.tteni.univer.common.model.Student;
-import am.tteni.univer.common.universityexception.UniversityAppException;
 import am.tteni.univer.repository.interfaces.StudentRepository;
+
+import java.util.ArrayList;
 
 /**
  * Created by Narek on 09.11.2016.
@@ -11,8 +12,13 @@ import am.tteni.univer.repository.interfaces.StudentRepository;
 public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
-    public void update(Student student, Group group) {
+    public boolean read(String username, String eMail) {
+        return false;
+    }
 
+    @Override
+    public ArrayList<Student> read(Group group) {
+        return null;
     }
 
     @Override
@@ -23,12 +29,6 @@ public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public Student read(Student obj) {
         return null;
-    }
-
-    @Override
-    public boolean read(String username, String eMail) throws UniversityAppException {
-//        throw new UniversityAppException("Username exist");
-        return false;
     }
 
     @Override

@@ -16,11 +16,6 @@ public class Professor {
 
     }
 
-    public Professor(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
     public Professor(String firstName, String lastName, String username, String password, String eMail) {
         this.firstName = firstName;
         this.lastName = lastName;

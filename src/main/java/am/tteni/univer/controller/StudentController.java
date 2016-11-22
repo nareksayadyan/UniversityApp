@@ -5,9 +5,9 @@ import am.tteni.univer.common.model.Student;
 import am.tteni.univer.common.model.type.StudySemester;
 import am.tteni.univer.common.model.type.StudyYear;
 import am.tteni.univer.common.universityexception.UniversityAppException;
-import am.tteni.univer.repository.implementations.LessonRepositoryImpl;
+import am.tteni.univer.repository.implementations.CourseRepositoryImpl;
 import am.tteni.univer.repository.implementations.StudentRepositoryImpl;
-import am.tteni.univer.repository.interfaces.LessonRepository;
+import am.tteni.univer.repository.interfaces.CourseRepository;
 import am.tteni.univer.repository.interfaces.StudentRepository;
 
 /**
@@ -16,7 +16,9 @@ import am.tteni.univer.repository.interfaces.StudentRepository;
 public class StudentController {
 
     StudentRepository studentRepository = new StudentRepositoryImpl();
-    LessonRepository lessonRepository = new LessonRepositoryImpl();
+    CourseRepository courseRepository = new CourseRepositoryImpl();
+
+    GroupController groupController = new GroupController();
 
     public Student addStudent(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester) throws UniversityAppException {
         Student student = null;
@@ -31,6 +33,8 @@ public class StudentController {
         return studentRepository.read(username, eMail);
     }
 
+//    public Student getStudent()
+
     public Student addStudentToGroup(Student student, Group group) {
         student.setGroupNumber(group.getGroupNumber());
         studentRepository.update(student);
@@ -38,7 +42,8 @@ public class StudentController {
     }
 
     public Student getStudentCourses(Student student) {
-        student.setCourses(lessonRepository.read(student));
+        Group group = groupController.getGroup(student.getGroupNumber());
+        student.setCourses(courseRepository.read(group));
         return student;
     }
 }

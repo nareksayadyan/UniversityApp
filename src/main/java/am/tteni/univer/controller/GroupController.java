@@ -2,8 +2,13 @@ package am.tteni.univer.controller;
 
 import am.tteni.univer.common.model.Faculty;
 import am.tteni.univer.common.model.Group;
+import am.tteni.univer.common.model.Student;
 import am.tteni.univer.repository.implementations.GroupRepositoryImpl;
+import am.tteni.univer.repository.implementations.StudentRepositoryImpl;
 import am.tteni.univer.repository.interfaces.GroupRepository;
+import am.tteni.univer.repository.interfaces.StudentRepository;
+
+import java.util.ArrayList;
 
 /**
  * Created by Narek Sayadyan on 21.11.2016.
@@ -11,23 +16,28 @@ import am.tteni.univer.repository.interfaces.GroupRepository;
 public class GroupController {
 
     GroupRepository groupRepository = new GroupRepositoryImpl();
+    StudentRepository studentRepository = new StudentRepositoryImpl();
 
-    public Group addGroup(int groupNumber, Faculty faculty) {
+    public Group addGroupToUniversity(int groupNumber, Faculty faculty) {
         Group group = null;
-        if (isFreeGroupNumber(groupNumber, faculty)) {
+        if (isFreeGroupNumber(groupNumber)) {
             group = new Group(groupNumber);
             groupRepository.create(group, faculty);
         }
         return group;
     }
 
-    public boolean isFreeGroupNumber(int groupNumber, Faculty faculty) {
-        return groupRepository.read(groupNumber, faculty) == null;
+    public boolean isFreeGroupNumber(int groupNumber) {
+        return groupRepository.read(groupNumber) == null;
     }
 
-//    public Group getGroup(int groupNumber, Faculty faculty) {
-//        Group group = groupRepository.read(new Group(groupNumber), faculty);
-//        return group;
-//    }
+    public Group getGroup(int groupNumber) {
+        return groupRepository.read(groupNumber);
+    }
+
+    public ArrayList<Student> getStudentsInGroup(Group group) {
+        group.setStudents(studentRepository.read(group));
+        return group.getStudents();
+    }
 }
 

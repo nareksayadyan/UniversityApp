@@ -21,12 +21,11 @@ public class Course {
 
     }
 
-    public Course(String courseSubject, int auditoriumNumber, WeekDay weekDay, CourseTime courseTime, Professor professor) {
+    public Course(String courseSubject, int auditoriumNumber, WeekDay weekDay, CourseTime courseTime) {
         this.courseSubject = courseSubject;
         this.auditoriumNumber = auditoriumNumber;
         this.weekDay = weekDay;
         this.courseTime = courseTime;
-        this.professor = professor;
     }
 
     public int getCourseId() {

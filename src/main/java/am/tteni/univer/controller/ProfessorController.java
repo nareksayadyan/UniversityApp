@@ -23,4 +23,6 @@ public class ProfessorController {
     public boolean isFreeProfessorUsernameEMail(String username, String eMail) throws UniversityAppException {
         return professorRepository.read(username, eMail);
     }
+
+//    public Professor getProfessor()
 }

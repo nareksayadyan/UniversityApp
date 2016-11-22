@@ -2,8 +2,9 @@ package am.tteni.univer.repository.implementations;
 
 import am.tteni.univer.common.model.Faculty;
 import am.tteni.univer.common.model.Group;
-import am.tteni.univer.common.universityexception.UniversityAppException;
 import am.tteni.univer.repository.interfaces.GroupRepository;
+
+import java.util.ArrayList;
 
 /**
  * Created by Narek on 18.11.2016.
@@ -11,13 +12,17 @@ import am.tteni.univer.repository.interfaces.GroupRepository;
 public class GroupRepositoryImpl implements GroupRepository {
 
     @Override
-    public Group read(int groupNumber, Faculty faculty) {
-//        throw new UniversityAppException("Group number exist in this faculty");
+    public Group create(Group group, Faculty faculty) {
         return null;
     }
 
     @Override
-    public Group create(Group group, Faculty faculty) {
+    public Group read(int groupNumber) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Group> read(Faculty faculty) {
         return null;
     }
 

@@ -21,15 +21,6 @@ public class Student {
     private int groupNumber;
     private ArrayList<Course> courses;
 
-    public Student() {
-
-    }
-
-    public Student(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
     public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -38,17 +29,6 @@ public class Student {
         this.eMail = eMail;
         this.studyYear = studyYear;
         this.studySemester = studySemester;
-    }
-
-    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-        this.eMail = eMail;
-        this.studyYear = studyYear;
-        this.studySemester = studySemester;
-        this.groupNumber = groupNumber;
     }
 
     public int getStudentId() {
