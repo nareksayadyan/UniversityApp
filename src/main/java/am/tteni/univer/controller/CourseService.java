@@ -5,26 +5,35 @@ import am.tteni.univer.common.model.Group;
 import am.tteni.univer.common.model.Professor;
 import am.tteni.univer.common.model.type.CourseTime;
 import am.tteni.univer.common.model.type.WeekDay;
+import am.tteni.univer.common.universityexception.UniversityAppException;
 import am.tteni.univer.repository.implementations.CourseRepositoryImpl;
 import am.tteni.univer.repository.interfaces.CourseRepository;
 
 /**
  * Created by Narek Sayadyan on 18.11.2016.
  */
-public class CourseController {
+public class CourseService {
 
     CourseRepository courseRepository = new CourseRepositoryImpl();
 
-    public Course addCourse(String subject, int auditoriumNumber, WeekDay weekDay, CourseTime courseTime) {
+    /**
+     *
+     * @param course
+     * @return
+     * @throws UniversityAppException
+     */
+    public int addCourse(Course course) throws UniversityAppException {
         Course course = null;
         if (auditoriumIsFree(auditoriumNumber, weekDay, courseTime)) {
             course = new Course(subject, auditoriumNumber, weekDay, courseTime);
             courseRepository.create(course);
+        } else {
+            throw new UniversityAppException("Au");
         }
-        return course;
+        return course.getCourseId();
     }
 
-    public Course addProfessorToCourse(Professor professor, Course course) {
+    public int addProfessorToCourse(int professorId, int courseId) {
         if (professorIsFree(professor, course)){
             course.setProfessor(professor);
             courseRepository.update(course);
