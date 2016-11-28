@@ -1,4 +1,4 @@
-package am.tteni.univer.repository.interfaces;
+package am.tteni.univer.repository;
 
 /**
  * Created by Narek on 09.11.2016.

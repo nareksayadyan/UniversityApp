@@ -1,8 +1,6 @@
 package am.tteni.univer.repository.implementations;
 
-import am.tteni.univer.common.model.Faculty;
-import am.tteni.univer.common.model.University;
-import am.tteni.univer.repository.interfaces.FacultyRepository;
+import am.tteni.univer.repository.FacultyRepository;
 
 import java.util.ArrayList;
 

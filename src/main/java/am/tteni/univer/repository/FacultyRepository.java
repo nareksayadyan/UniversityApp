@@ -1,7 +1,4 @@
-package am.tteni.univer.repository.interfaces;
-
-import am.tteni.univer.common.model.Faculty;
-import am.tteni.univer.common.model.University;
+package am.tteni.univer.repository;
 
 import java.util.ArrayList;
 

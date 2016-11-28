@@ -1,11 +1,11 @@
 package am.tteni.univer.repository.implementations;
 
-import am.tteni.univer.common.model.Course;
-import am.tteni.univer.common.model.Group;
-import am.tteni.univer.common.model.Professor;
-import am.tteni.univer.common.model.type.CourseTime;
-import am.tteni.univer.common.model.type.WeekDay;
-import am.tteni.univer.repository.interfaces.CourseRepository;
+import am.tteni.univer.common.dto.CourseDto;
+import am.tteni.univer.common.dto.GroupDto;
+import am.tteni.univer.common.dto.ProfessorDto;
+import am.tteni.univer.common.dto.type.CourseTime;
+import am.tteni.univer.common.dto.type.WeekDay;
+import am.tteni.univer.repository.CourseRepository;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CourseRepositoryImpl implements CourseRepository {
 
     @Override
-    public void create(Group group, Course course) {
+    public void create(GroupDto group, CourseDto course) {
 
     }
 
@@ -25,37 +25,37 @@ public class CourseRepositoryImpl implements CourseRepository {
     }
 
     @Override
-    public boolean read(Professor professor, Course course) {
+    public boolean read(ProfessorDto professor, CourseDto course) {
         return false;
     }
 
     @Override
-    public ArrayList<Course> read(Group group) {
+    public ArrayList<CourseDto> read(GroupDto group) {
         return null;
     }
 
     @Override
-    public void delete(Group group, Course course) {
+    public void delete(GroupDto group, CourseDto course) {
 
     }
 
     @Override
-    public Course create(Course obj) {
+    public CourseDto create(CourseDto obj) {
         return null;
     }
 
     @Override
-    public Course read(Course obj) {
+    public CourseDto read(CourseDto obj) {
         return null;
     }
 
     @Override
-    public Course update(Course obj) {
+    public CourseDto update(CourseDto obj) {
         return null;
     }
 
     @Override
-    public void delete(Course obj) {
+    public void delete(CourseDto obj) {
 
     }
 }

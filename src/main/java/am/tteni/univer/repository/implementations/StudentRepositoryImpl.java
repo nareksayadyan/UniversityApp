@@ -1,8 +1,8 @@
 package am.tteni.univer.repository.implementations;
 
-import am.tteni.univer.common.model.Group;
-import am.tteni.univer.common.model.Student;
-import am.tteni.univer.repository.interfaces.StudentRepository;
+import am.tteni.univer.common.dto.GroupDto;
+import am.tteni.univer.common.dto.StudentDto;
+import am.tteni.univer.repository.StudentRepository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -22,12 +22,12 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public ArrayList<Student> read(Group group) {
+    public ArrayList<StudentDto> read(GroupDto group) {
         return null;
     }
 
     @Override
-    public Student create(Student obj) {
+    public StudentDto create(StudentDto obj) {
 
         String sql = "INSERT INTO student "
                 + "(firstname, lastname, username, password, e_mail, study_year, study_semester) "
@@ -47,17 +47,17 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public Student read(Student obj) {
+    public StudentDto read(StudentDto obj) {
         return null;
     }
 
     @Override
-    public Student update(Student obj) {
+    public StudentDto update(StudentDto obj) {
         return null;
     }
 
     @Override
-    public void delete(Student obj) {
+    public void delete(StudentDto obj) {
 
     }
 }

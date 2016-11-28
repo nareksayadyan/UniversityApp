@@ -1,4 +1,4 @@
-package am.tteni.univer.common.model.type;
+package am.tteni.univer.common.dto.type;
 
 /**
  * Created by Narek Sayadyan on 10.11.2016.

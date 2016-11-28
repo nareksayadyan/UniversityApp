@@ -1,34 +1,36 @@
-package am.tteni.univer.common.model;
+package am.tteni.univer.common.dto;
 
-import am.tteni.univer.common.model.type.StudySemester;
-import am.tteni.univer.common.model.type.StudyYear;
-
-import java.util.ArrayList;
+import am.tteni.univer.common.dto.type.StudySemester;
+import am.tteni.univer.common.dto.type.StudyYear;
 
 /**
  * Created by Narek Sayadyan on 09.11.2016.
  */
-public class Student {
+public class StudentDto {
 
     private int studentId;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String username;
     private String password;
     private String eMail;
     private StudyYear studyYear;
     private StudySemester studySemester;
-    private int groupNumber;
-    private ArrayList<Course> courses;
+    private int groupId;
 
-    public Student(String firstName, String lastName, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public StudentDto() {
+    }
+
+    public StudentDto(int studentId, String firstname, String lastname, String username, String password, String eMail, StudyYear studyYear, StudySemester studySemester, int groupId) {
+        this.studentId = studentId;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.username = username;
         this.password = password;
         this.eMail = eMail;
         this.studyYear = studyYear;
         this.studySemester = studySemester;
+        this.groupId = groupId;
     }
 
     public int getStudentId() {
@@ -39,20 +41,20 @@ public class Student {
         this.studentId = studentId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getUsername() {
@@ -95,19 +97,11 @@ public class Student {
         this.studySemester = studySemester;
     }
 
-    public int getGroupNumber() {
-        return groupNumber;
+    public int getGroupId() {
+        return groupId;
     }
 
-    public void setGroupNumber(int groupNumber) {
-        this.groupNumber = groupNumber;
-    }
-
-    public ArrayList<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
 }

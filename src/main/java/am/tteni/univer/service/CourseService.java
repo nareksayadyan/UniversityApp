@@ -1,13 +1,9 @@
-package am.tteni.univer.controller;
+package am.tteni.univer.service;
 
-import am.tteni.univer.common.model.Course;
-import am.tteni.univer.common.model.Group;
-import am.tteni.univer.common.model.Professor;
-import am.tteni.univer.common.model.type.CourseTime;
-import am.tteni.univer.common.model.type.WeekDay;
-import am.tteni.univer.common.universityexception.UniversityAppException;
+import am.tteni.univer.common.appexception.AppException;
+import am.tteni.univer.common.dto.CourseDto;
 import am.tteni.univer.repository.implementations.CourseRepositoryImpl;
-import am.tteni.univer.repository.interfaces.CourseRepository;
+import am.tteni.univer.repository.CourseRepository;
 
 /**
  * Created by Narek Sayadyan on 18.11.2016.
@@ -20,15 +16,15 @@ public class CourseService {
      *
      * @param course
      * @return
-     * @throws UniversityAppException
+     * @throws AppException
      */
-    public int addCourse(Course course) throws UniversityAppException {
-        Course course = null;
+    public int addCourse(CourseDto course) throws AppException {
+        CourseDto course = null;
         if (auditoriumIsFree(auditoriumNumber, weekDay, courseTime)) {
-            course = new Course(subject, auditoriumNumber, weekDay, courseTime);
+            course = new CourseDto(subject, auditoriumNumber, weekDay, courseTime);
             courseRepository.create(course);
         } else {
-            throw new UniversityAppException("Au");
+            throw new AppException("Au");
         }
         return course.getCourseId();
     }
@@ -41,11 +37,11 @@ public class CourseService {
         return course;
     }
 
-    public void addGroupToCourse(Group group, Course course) {
+    public void addGroupToCourse(GroupDto group, CourseDto course) {
         courseRepository.create(group, course);
     }
 
-    public void deleteGroupFromCourse(Group group, Course course) {
+    public void deleteGroupFromCourse(GroupDto group, CourseDto course) {
         courseRepository.delete(group, course);
     }
 
@@ -53,7 +49,7 @@ public class CourseService {
         return courseRepository.read(auditoriumNumber, weekDay, courseTime);
     }
 
-    boolean professorIsFree(Professor professor, Course course) {
+    boolean professorIsFree(ProfessorDto professor, CourseDto course) {
         return courseRepository.read(professor, course);
     }
 }

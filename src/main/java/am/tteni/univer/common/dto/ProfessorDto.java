@@ -1,24 +1,24 @@
-package am.tteni.univer.common.model;
+package am.tteni.univer.common.dto;
 
 /**
  * Created by Narek on 09.11.2016.
  */
-public class Professor {
+public class ProfessorDto {
 
     private int professorId;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String username;
     private String password;
     private String eMail;
 
-    public Professor() {
-
+    public ProfessorDto() {
     }
 
-    public Professor(String firstName, String lastName, String username, String password, String eMail) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public ProfessorDto(int professorId, String firstname, String lastname, String username, String password, String eMail) {
+        this.professorId = professorId;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.username = username;
         this.password = password;
         this.eMail = eMail;
@@ -32,20 +32,20 @@ public class Professor {
         this.professorId = professorId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getUsername() {

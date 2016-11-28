@@ -1,6 +1,7 @@
-package am.tteni.univer.common.model;
+package am.tteni.univer.common.bean;
 
-import am.tteni.univer.common.FacultyDto;
+import am.tteni.univer.common.dto.FacultyDto;
+import am.tteni.univer.common.dto.GroupDto;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public class FacultyBean {
     FacultyDto facultyDto;
-    List<Group> groupList;
+    List<GroupDto> groupList;
 
     public Faculty getFaculty() {
         return faculty;
@@ -19,11 +20,11 @@ public class FacultyBean {
         this.faculty = faculty;
     }
 
-    public List<Group> getGroupList() {
+    public List<GroupDto> getGroupList() {
         return groupList;
     }
 
-    public void setGroupList(List<Group> groupList) {
+    public void setGroupList(List<GroupDto> groupList) {
         this.groupList = groupList;
     }
 }

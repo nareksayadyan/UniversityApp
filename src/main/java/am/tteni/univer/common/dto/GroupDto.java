@@ -1,18 +1,21 @@
-package am.tteni.univer.common.model;
-
-import java.util.ArrayList;
+package am.tteni.univer.common.dto;
 
 /**
  * Created by Narek on 17.11.2016.
  */
-public class Group {
+public class GroupDto {
 
     private int groupId;
     private int groupNumber;
-    private ArrayList<Student> students;
+    private int facultyId;
 
-    public Group(int groupNumber) {
+    public GroupDto() {
+    }
+
+    public GroupDto(int groupId, int groupNumber, int facultyId) {
+        this.groupId = groupId;
         this.groupNumber = groupNumber;
+        this.facultyId = facultyId;
     }
 
     public int getGroupId() {
@@ -31,12 +34,11 @@ public class Group {
         this.groupNumber = groupNumber;
     }
 
-    public ArrayList<Student> getStudents() {
-        return students;
+    public int getFacultyId() {
+        return facultyId;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public void setFacultyId(int facultyId) {
+        this.facultyId = facultyId;
     }
-
 }

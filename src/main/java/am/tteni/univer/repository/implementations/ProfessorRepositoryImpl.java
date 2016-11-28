@@ -1,7 +1,7 @@
 package am.tteni.univer.repository.implementations;
 
-import am.tteni.univer.common.model.Professor;
-import am.tteni.univer.repository.interfaces.ProfessorRepository;
+import am.tteni.univer.common.dto.ProfessorDto;
+import am.tteni.univer.repository.ProfessorRepository;
 
 /**
  * Created by Narek Sayadyan on 10.11.2016.
@@ -14,22 +14,22 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
     }
 
     @Override
-    public Professor create(Professor obj) {
+    public ProfessorDto create(ProfessorDto obj) {
         return null;
     }
 
     @Override
-    public Professor read(Professor obj) {
+    public ProfessorDto read(ProfessorDto obj) {
         return null;
     }
 
     @Override
-    public Professor update(Professor obj) {
+    public ProfessorDto update(ProfessorDto obj) {
         return null;
     }
 
     @Override
-    public void delete(Professor obj) {
+    public void delete(ProfessorDto obj) {
 
     }
 }
