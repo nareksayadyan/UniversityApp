@@ -8,4 +8,6 @@ import am.tteni.univer.common.dto.UniversityDto;
 public interface UniversityDtoRepository extends CRUD<UniversityDto> {
 
     UniversityDto read(String universityName);
+
+    UniversityDto read(int universityId);
 }

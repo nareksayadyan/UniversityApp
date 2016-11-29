@@ -19,6 +19,15 @@ public class UniversityDto {
     public UniversityDto() {
     }
 
+    public UniversityDto(String name, String city, String region, String address, String phone, String zipCode) {
+        this.name = name;
+        this.city = city;
+        this.region = region;
+        this.address = address;
+        this.phone = phone;
+        this.zipCode = zipCode;
+    }
+
     public UniversityDto(int universityId, String name, String city, String region, String address, String phone, String zipCode, int rectorId, int firstProRectorId, int secondProRectorId) {
         this.universityId = universityId;
         this.name = name;
