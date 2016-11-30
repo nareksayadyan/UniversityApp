@@ -15,6 +15,14 @@ public class ProfessorDto {
     public ProfessorDto() {
     }
 
+    public ProfessorDto(String firstname, String lastname, String username, String password, String eMail) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.username = username;
+        this.password = password;
+        this.eMail = eMail;
+    }
+
     public ProfessorDto(int professorId, String firstname, String lastname, String username, String password, String eMail) {
         this.professorId = professorId;
         this.firstname = firstname;
