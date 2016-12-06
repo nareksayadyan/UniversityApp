@@ -1,5 +1,7 @@
 package am.tteni.univer.repository.implementations;
 
+import am.tteni.univer.common.dto.FacultyDto;
+import am.tteni.univer.common.dto.UniversityDto;
 import am.tteni.univer.repository.FacultyRepository;
 
 import java.util.ArrayList;
@@ -10,37 +12,37 @@ import java.util.ArrayList;
 public class FacultyRepositoryImpl implements FacultyRepository {
 
     @Override
-    public Faculty create(Faculty faculty, University university) {
+    public FacultyDto create(FacultyDto facultyDto, UniversityDto universityDto) {
         return null;
     }
 
     @Override
-    public Faculty read(String facultyName, University university) {
+    public FacultyDto read(String facultyName, UniversityDto universityDto) {
         return null;
     }
 
     @Override
-    public ArrayList<Faculty> read(University university) {
+    public ArrayList<FacultyDto> read(UniversityDto universityDto) {
         return null;
     }
 
     @Override
-    public Faculty create(Faculty obj) {
+    public FacultyDto create(FacultyDto obj) {
         return null;
     }
 
     @Override
-    public Faculty read(Faculty obj) {
+    public FacultyDto read(FacultyDto obj) {
         return null;
     }
 
     @Override
-    public Faculty update(Faculty obj) {
+    public FacultyDto update(FacultyDto obj) {
         return null;
     }
 
     @Override
-    public void delete(Faculty obj) {
+    public void delete(FacultyDto obj) {
 
     }
 }

@@ -1,5 +1,6 @@
 package am.tteni.univer.repository;
 
+import am.tteni.univer.common.dto.FacultyDto;
 import am.tteni.univer.common.dto.GroupDto;
 
 import java.util.ArrayList;
@@ -9,9 +10,9 @@ import java.util.ArrayList;
  */
 public interface GroupRepository extends CRUD<GroupDto> {
 
-    GroupDto create(GroupDto group, Faculty faculty);
+    GroupDto create(GroupDto group, FacultyDto facultyDto);
 
     GroupDto read(int groupNumber);
 
-    ArrayList<GroupDto> read(Faculty faculty);
+    ArrayList<GroupDto> read(FacultyDto facultyDto);
 }

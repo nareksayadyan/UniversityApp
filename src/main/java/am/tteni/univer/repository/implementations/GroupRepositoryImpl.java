@@ -1,5 +1,6 @@
 package am.tteni.univer.repository.implementations;
 
+import am.tteni.univer.common.dto.FacultyDto;
 import am.tteni.univer.common.dto.GroupDto;
 import am.tteni.univer.repository.GroupRepository;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 public class GroupRepositoryImpl implements GroupRepository {
 
     @Override
-    public GroupDto create(GroupDto group, Faculty faculty) {
+    public GroupDto create(GroupDto group, FacultyDto facultyDto) {
         return null;
     }
 
@@ -21,7 +22,7 @@ public class GroupRepositoryImpl implements GroupRepository {
     }
 
     @Override
-    public ArrayList<GroupDto> read(Faculty faculty) {
+    public ArrayList<GroupDto> read(FacultyDto facultyDto) {
         return null;
     }
 
