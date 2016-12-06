@@ -35,9 +35,9 @@ public class UniversityDtoService {
         return universityDto;
     }
 
-    public void changeUniversityDto(UniversityDto universityDto) throws AppException {
-        universityDtoRepository.update(universityDto);
-    }
+//    public void changeUniversityDto(UniversityDto universityDto) throws AppException {
+//        universityDtoRepository.update(universityDto);
+//    }
 
     public void setRectorToUniversityDto(int universityId, int professorID) {
 

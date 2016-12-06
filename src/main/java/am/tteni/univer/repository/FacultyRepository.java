@@ -1,15 +1,18 @@
 package am.tteni.univer.repository;
 
+import am.tteni.univer.common.dto.FacultyDto;
+import am.tteni.univer.common.dto.UniversityDto;
+
 import java.util.ArrayList;
 
 /**
  * Created by Narek on 18.11.2016.
  */
-public interface FacultyRepository extends CRUD<Faculty>{
+public interface FacultyRepository extends CRUD<FacultyDto>{
 
-    Faculty create(Faculty faculty, University university);
+    FacultyDto create(FacultyDto faculty, UniversityDto universityDto);
 
-    Faculty read(String facultyName, University university);
+    FacultyDto read(String facultyName, UniversityDto universityDto);
 
-    ArrayList<Faculty> read(University university);
+    ArrayList<FacultyDto> read(UniversityDto universityDto);
 }

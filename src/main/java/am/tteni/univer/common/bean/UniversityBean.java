@@ -1,5 +1,6 @@
 package am.tteni.univer.common.bean;
 
+import am.tteni.univer.common.dto.FacultyDto;
 import am.tteni.univer.common.dto.UniversityDto;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
 public class UniversityBean {
 
     UniversityDto universityDto;
-    List<Faculty> facultyBeanList;
+    List<FacultyDto> facultyBeanList;
 }

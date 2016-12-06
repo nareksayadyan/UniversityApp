@@ -12,12 +12,12 @@ public class FacultyBean {
     FacultyDto facultyDto;
     List<GroupDto> groupList;
 
-    public Faculty getFaculty() {
-        return faculty;
+    public FacultyDto getFaculty() {
+        return facultyDto;
     }
 
-    public void setFaculty(Faculty faculty) {
-        this.faculty = faculty;
+    public void setFaculty(FacultyDto faculty) {
+        this.facultyDto = faculty;
     }
 
     public List<GroupDto> getGroupList() {
