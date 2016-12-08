@@ -7,7 +7,13 @@ import am.tteni.univer.common.dto.UniversityDto;
  */
 public interface UniversityDtoRepository extends CRUD<UniversityDto> {
 
-    UniversityDto read(String universityName);
+    UniversityDto readByName(String universityName);
 
-    UniversityDto read(int universityId);
+    UniversityDto readById(int universityId);
+
+    void setRector(int universityId, int professorId);
+
+    void setFirstProRector(int universityId, int professorId);
+
+    void setSecondProRector(int universityId, int professorId);
 }

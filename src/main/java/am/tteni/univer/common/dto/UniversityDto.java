@@ -12,20 +12,23 @@ public class UniversityDto {
     private String address;
     private String phone;
     private String zipCode;
-    private int RectorId;
+    private int rectorId;
     private int firstProRectorId;
     private int secondProRectorId;
 
     public UniversityDto() {
     }
 
-    public UniversityDto(String name, String city, String region, String address, String phone, String zipCode) {
+    public UniversityDto(String name, String city, String region, String address, String phone, String zipCode, int rectorId, int firstProRectorId, int secondProRectorId) {
         this.name = name;
         this.city = city;
         this.region = region;
         this.address = address;
         this.phone = phone;
         this.zipCode = zipCode;
+        this.rectorId = rectorId;
+        this.firstProRectorId = firstProRectorId;
+        this.secondProRectorId = secondProRectorId;
     }
 
     public UniversityDto(int universityId, String name, String city, String region, String address, String phone, String zipCode, int rectorId, int firstProRectorId, int secondProRectorId) {
@@ -36,7 +39,7 @@ public class UniversityDto {
         this.address = address;
         this.phone = phone;
         this.zipCode = zipCode;
-        RectorId = rectorId;
+        this.rectorId = rectorId;
         this.firstProRectorId = firstProRectorId;
         this.secondProRectorId = secondProRectorId;
     }
@@ -98,11 +101,11 @@ public class UniversityDto {
     }
 
     public int getRectorId() {
-        return RectorId;
+        return rectorId;
     }
 
     public void setRectorId(int rectorId) {
-        RectorId = rectorId;
+        this.rectorId = rectorId;
     }
 
     public int getFirstProRectorId() {

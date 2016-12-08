@@ -7,6 +7,10 @@ import am.tteni.univer.common.dto.ProfessorDto;
  */
 public interface ProfessorRepository extends CRUD<ProfessorDto> {
 
-    boolean read(String username, String eMail);
+    boolean readByUsernameEmail(String username, String eMail);
+
+    ProfessorDto readByName(String firstname, String lastname);
+
+    ProfessorDto readById(int professorId);
 
 }
