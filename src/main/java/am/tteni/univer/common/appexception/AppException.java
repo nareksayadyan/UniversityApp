@@ -13,4 +13,8 @@ public class AppException extends Exception {
     public AppException(String e) {
         this.e = e;
     }
+
+    public String getMsg() {
+        return this.e;
+    }
 }

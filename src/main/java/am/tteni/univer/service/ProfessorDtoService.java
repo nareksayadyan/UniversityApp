@@ -12,6 +12,11 @@ public class ProfessorDtoService {
 
     ProfessorRepository professorRepository = new ProfessorRepositoryImpl();
 
+    /**
+     * Adding ProfessorDto to database.
+     * @param professorDto
+     * @throws AppException
+     */
     public void addProfessorDto(ProfessorDto professorDto) throws AppException{
         if (professorRepository.readByUsernameEmail(professorDto.getUsername(), professorDto.geteMail())) {
             throw new AppException("username or e-mail is used");

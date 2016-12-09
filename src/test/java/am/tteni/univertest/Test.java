@@ -35,12 +35,12 @@ public class Test {
 //        }
 
 
-//        UniversityDto universityDto1 = new UniversityDto("Yerevan State University", "Yerevan", "Yerevan", "Aleq Manukyan 1", "+37410987654", "0082", 1, 4, 5);
-//        try {
-//            universityDtoService.addUniversityDto(universityDto1);
-//        } catch (AppException e) {
-//            System.out.println(e);
-//        }
+        UniversityDto universityDto1 = new UniversityDto("Yerevan State University", "Yerevan", "Yerevan", "Aleq Manukyan 1", "+37410987654", "0082", 1, 4, 5);
+        try {
+            universityDtoService.addUniversityDto(universityDto1);
+        } catch (AppException e) {
+            System.out.println(e.getMsg());
+        }
 
 //        UniversityDto universityDto2 = new UniversityDto("Politexnik", "Yerevan", "Yerevan", "Teryan 44/3", "+37410444444", "0089", 3, 3, 3);
 //        try {
