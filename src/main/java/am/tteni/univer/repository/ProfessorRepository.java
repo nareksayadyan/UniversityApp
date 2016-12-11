@@ -13,4 +13,6 @@ public interface ProfessorRepository extends CRUD<ProfessorDto> {
 
     ProfessorDto readById(int professorId);
 
+    void delete(int professorId);
+
 }

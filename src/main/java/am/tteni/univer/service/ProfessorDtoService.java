@@ -13,7 +13,7 @@ public class ProfessorDtoService {
     ProfessorRepository professorRepository = new ProfessorRepositoryImpl();
 
     /**
-     * Adding ProfessorDto to database.
+     * Adding ProfessorDto to database
      * @param professorDto
      * @throws AppException
      */
@@ -25,15 +25,48 @@ public class ProfessorDtoService {
         }
     }
 
+    /**
+     *
+     * @param firstname
+     * @param lastname
+     * @return
+     * @throws AppException
+     */
     public ProfessorDto getProfessorDtoByName(String firstname, String lastname) throws AppException {
         ProfessorDto professorDto = professorRepository.readByName(firstname, lastname);
         if(professorDto == null) {
-            throw new AppException("There is not Professor by name " + firstname + lastname);
+            throw new AppException("There is not Professor by name " + firstname + " " + lastname);
         }
-        return  professorDto;
+        return professorDto;
     }
 
-    public ProfessorDto getProfessorDtoById(int professorId) {
-        return professorRepository.readById(professorId);
+    /**
+     *
+     * @param professorId
+     * @return
+     * @throws AppException
+     */
+    public ProfessorDto getProfessorDtoById(int professorId) throws AppException {
+        ProfessorDto professorDto = professorRepository.readById(professorId);
+        if (professorDto == null) {
+            throw new AppException("There is not Professor with this credential");
+        }
+        return professorDto;
+    }
+
+    /**
+     *
+     * @param professorDto
+     */
+    public void changeProfessorDto(ProfessorDto professorDto) {
+        professorRepository.update(professorDto);
+    }
+
+    /**
+     *
+     * @param professorId
+     */
+    public void deleteProfessor(int professorId) {
+        professorRepository.delete(professorId);
     }
 }

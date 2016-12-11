@@ -1,5 +1,4 @@
 package am.tteni.univer.service;
-package am.tteni.univer.service;
 
 import am.tteni.univer.common.appexception.AppException;
 import am.tteni.univer.common.dto.CourseDto;
@@ -17,36 +16,36 @@ public class CourseDtoService {
 
     CourseRepository courseRepository = new CourseRepositoryImpl();
 
-    /**
-     * Adding CourseDto to database.
-     * @param courseDto
-     * @throws AppException
-     */
-    public void addCourseDto(CourseDto courseDto) throws AppException {
-        CourseDto courseDto = null;
-        if (auditoriumIsFree(auditoriumNumber, weekDay, courseTime)) {
-            course = new CourseDto(subject, auditoriumNumber, weekDay, courseTime);
-            courseRepository.create(course);
-        } else {
-            throw new AppException("Au");
-        }
-        return course.getCourseId();
-    }
-
-    public int addProfessorToCourse(int professorId, int courseId) {
-        if (professorIsFree(professor, course)){
-            course.setProfessor(professor);
-            courseRepository.update(course);
-        }
-        return course;
-    }
+//    /**
+//     * Adding CourseDto to database.
+//     * @param courseDto
+//     * @throws AppException
+//     */
+//    public void addCourseDto(CourseDto courseDto) throws AppException {
+//        CourseDto courseDto = null;
+//        if (auditoriumIsFree(auditoriumNumber, weekDay, courseTime)) {
+//            course = new CourseDto(subject, auditoriumNumber, weekDay, courseTime);
+//            courseRepository.create(course);
+//        } else {
+//            throw new AppException("Au");
+//        }
+//        return course.getCourseId();
+//    }
+//
+//    public int addProfessorToCourse(int professorId, int courseId) {
+//        if (professorIsFree(professor, course)){
+//            course.setProfessor(professor);
+//            courseRepository.update(course);
+//        }
+//        return course;
+//    }
 
     public void addGroupToCourse(GroupDto groupId, CourseDto courseId) {
         courseRepository.create(groupId, courseId);
     }
 
     private void deleteGroupFromCourse(int groupId, int courseId) {
-        courseRepository.delete(groupId, courseId);
+//        courseRepository.delete(groupId, courseId);
     }
 
     private boolean auditoriumIsFree(int auditoriumNumber, WeekDay weekDay, CourseTime courseTime) {

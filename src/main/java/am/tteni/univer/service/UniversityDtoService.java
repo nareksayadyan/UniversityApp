@@ -12,6 +12,11 @@ public class UniversityDtoService {
 
     UniversityDtoRepository universityDtoRepository = new UniversityDtoRepositoryImpl();
 
+    /**
+     * Adding UniversityDto to database
+     * @param universityDto
+     * @throws AppException
+     */
     public void addUniversityDto(UniversityDto universityDto) throws AppException {
         if (universityDtoRepository.readByName(universityDto.getName()) == null) {
             universityDtoRepository.create(universityDto);
