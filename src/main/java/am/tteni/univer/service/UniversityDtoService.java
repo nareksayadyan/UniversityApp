@@ -39,6 +39,11 @@ public class UniversityDtoService {
         universityDtoRepository.update(universityDto);
     }
 
+    /**
+     *
+     * @param universityId
+     * @param professorID
+     */
     public void setRectorToUniversityDto(int universityId, int professorID) {
         universityDtoRepository.setRector(universityId, professorID);
     }

@@ -14,6 +14,11 @@ public class UniversityDtoRepositoryImpl implements UniversityDtoRepository {
     private static final String DB_USER = "java";
     private static final String DB_PASSWORD = "java";
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public UniversityDto create(UniversityDto obj) {
         String sql = "INSERT INTO university "
@@ -45,6 +50,11 @@ public class UniversityDtoRepositoryImpl implements UniversityDtoRepository {
         return null;
     }
 
+    /**
+     *
+     * @param universityName
+     * @return
+     */
     @Override
     public UniversityDto readByName(String universityName) {
         UniversityDto university = null;
@@ -90,9 +100,26 @@ public class UniversityDtoRepositoryImpl implements UniversityDtoRepository {
 
     }
 
+    /**
+     *
+     * @param universityId
+     * @param professorId
+     */
     @Override
     public void setRector(int universityId, int professorId) {
+        String sql = "UPDATE university " +
+                "SET rector_id = ? " +
+                "WHERE university_id = ?";
 
+        try (Connection con = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
+             PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setInt(1, professorId);
+            ps.setInt(2, universityId);
+            ps.execute();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
     @Override

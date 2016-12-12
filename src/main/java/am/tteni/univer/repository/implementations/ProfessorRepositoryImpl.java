@@ -14,18 +14,29 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
     private static final String DB_USER = "java";
     private static final String DB_PASSWORD = "java";
 
+    /**
+     *
+     * @param username
+     * @param eMail
+     * @return
+     */
     @Override
     public boolean readByUsernameEmail(String username, String eMail) {
         boolean r = false;
-        String sql = "SELECT * "
+        String sql = "SELECT count(*) "
                 + "FROM professor "
-                + "WHERE username = ? AND e_mail = ?";
+                + "WHERE username = ? OR e_mail = ?";
         try (Connection con = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
              PreparedStatement ps = con.prepareStatement(sql)){
 
             ps.setString(1, username);
             ps.setString(2, eMail);
-            r = ps.execute();
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                if (rs.getInt(1) != 0) {
+                    r = true;
+                }
+            }
         } catch (SQLException e) {
             System.out.println(e);
         }

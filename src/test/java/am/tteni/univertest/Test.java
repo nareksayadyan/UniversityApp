@@ -3,6 +3,8 @@ package am.tteni.univertest;
 import am.tteni.univer.common.appexception.AppException;
 import am.tteni.univer.common.dto.ProfessorDto;
 import am.tteni.univer.common.dto.UniversityDto;
+import am.tteni.univer.repository.implementations.ProfessorRepositoryImpl;
+import am.tteni.univer.repository.implementations.UniversityDtoRepositoryImpl;
 import am.tteni.univer.service.ProfessorDtoService;
 import am.tteni.univer.service.UniversityDtoService;
 
@@ -15,34 +17,38 @@ public class Test {
         UniversityDtoService universityDtoService = new UniversityDtoService();
         ProfessorDtoService professorDtoService = new ProfessorDtoService();
 
+        UniversityDtoRepositoryImpl universityDtoRepository = new UniversityDtoRepositoryImpl();
+        universityDtoRepository.setRector(4, 13);
+
+//        ProfessorRepositoryImpl repository = new ProfessorRepositoryImpl();
+//        System.out.println(repository.readByUsernameEmail("prof1", ""));
 
 
 //        professorDtoService.deleteProfessor(9);
-
 //        ProfessorDto professorDto = new ProfessorDto(11, "profik7", "profikyan7", "prof7", "profpass7", "lololol@am.am");
-
 //        professorDtoService.changeProfessorDto(professorDto);
 
-//        ProfessorDto professorDto1 = new ProfessorDto("profik8", "profikyan8", "prof8", "profpass8", "prof8@uni.am");
+//        ProfessorDto professorDto1 = new ProfessorDto("profik9", "profikyan9", "prof9", "profpass9", "prof9@uni.am");
 //        ProfessorDto professorDto2 = new ProfessorDto("profik2", "profikyan2", "prof2", "profpass2", "prof2@uni.am");
 //        ProfessorDto professorDto3 = new ProfessorDto("profik3", "profikyan3", "prof3", "profpass3", "prof3@uni.am");
 //        ProfessorDto professorDto4 = new ProfessorDto("profik4", "profikyan4", "prof4", "profpass4", "prof4@uni.am");
 //        ProfessorDto professorDto5 = new ProfessorDto("profik5", "profikyan5", "prof5", "profpass5", "prof5@uni.am");
 //        ProfessorDto professorDto6 = new ProfessorDto("profik6", "profikyan6", "prof6", "profpass6", "prof6@uni.am");
 
-        try {
-            ProfessorDto professorDto = professorDtoService.getProfessorDtoById(115);
-//            ProfessorDto professorDto = professorDtoService.getProfessorDtoByName("profik7", "profikyan7");
-            System.out.println(professorDto.geteMail());
+//        try {
+//            ProfessorDto professorDto = professorDtoService.getProfessorDtoById(44);
+//            System.out.println(professorDto.geteMail());
+//            ProfessorDto professorDto10 = professorDtoService.getProfessorDtoByName("4profik7", "profikyan7");
+//            System.out.println(professorDto10.geteMail());
 //            professorDtoService.addProfessorDto(professorDto1);
 //            professorDtoService.addProfessorDto(professorDto2);
 //            professorDtoService.addProfessorDto(professorDto3);
 //            professorDtoService.addProfessorDto(professorDto4);
 //            professorDtoService.addProfessorDto(professorDto5);
 //            professorDtoService.addProfessorDto(professorDto6);
-        } catch (AppException e) {
-            System.out.println(e.getMsg());
-        }
+//        } catch (AppException e) {
+//            System.out.println(e.getMsg());
+//        }
 
 //        UniversityDto universityDto1 = new UniversityDto("Yerevan State University", "Yerevan", "Yerevan", "Aleq Manukyan 1", "+37410987654", "0082", 1, 4, 5);
 //        try {
