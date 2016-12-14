@@ -17,8 +17,27 @@ public class Test {
         UniversityDtoService universityDtoService = new UniversityDtoService();
         ProfessorDtoService professorDtoService = new ProfessorDtoService();
 
-        UniversityDtoRepositoryImpl universityDtoRepository = new UniversityDtoRepositoryImpl();
-        universityDtoRepository.setRector(4, 13);
+
+
+
+//        UniversityDto universityDtoForChange = null;
+//        try {
+//            universityDtoForChange = universityDtoService.getUniversityDtoById(4);
+//            System.out.println(universityDtoForChange.getName());
+//            universityDtoForChange.setName("Goris`s Medical State University");
+//            universityDtoService.changeUniversityDto(universityDtoForChange);
+//            System.out.println(universityDtoForChange.getName());
+//        } catch (AppException e) {
+//            System.out.println(e.getMsg());
+//        }
+
+//        "Goris State University", "Goris", "Syunik", "Mets Mher 24", "+37410454545", "0409", 1, 2, 3);
+
+//        try {
+//            System.out.println(universityDtoService.getUniversityDtoById(2).getAddress());
+//        } catch (AppException e) {
+//            e.printStackTrace();
+//        }
 
 //        ProfessorRepositoryImpl repository = new ProfessorRepositoryImpl();
 //        System.out.println(repository.readByUsernameEmail("prof1", ""));
@@ -50,7 +69,7 @@ public class Test {
 //            System.out.println(e.getMsg());
 //        }
 
-//        UniversityDto universityDto1 = new UniversityDto("Yerevan State University", "Yerevan", "Yerevan", "Aleq Manukyan 1", "+37410987654", "0082", 1, 4, 5);
+//        UniversityDto universityDto1 = new UniversityDto("Goris State University", "Goris", "Syunik", "Mets Mher 24", "+37410454545", "0409", 1, 2, 3);
 //        try {
 //            universityDtoService.addUniversityDto(universityDto1);
 //        } catch (AppException e) {

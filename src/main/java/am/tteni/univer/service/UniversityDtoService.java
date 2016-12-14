@@ -25,16 +25,33 @@ public class UniversityDtoService {
         }
     }
 
+    /**
+     *
+     * @param universityName
+     * @return
+     * @throws AppException
+     */
     public UniversityDto getUniversityDtoByName(String universityName) throws AppException {
         UniversityDto universityDto = universityDtoRepository.readByName(universityName);
         return universityDto;
     }
 
+    /**
+     *
+     * @param universityId
+     * @return
+     * @throws AppException
+     */
     public UniversityDto getUniversityDtoById(int universityId) throws AppException {
         UniversityDto universityDto = universityDtoRepository.readById(universityId);
         return universityDto;
     }
 
+    /**
+     *
+     * @param universityDto
+     * @throws AppException
+     */
     public void changeUniversityDto(UniversityDto universityDto) throws AppException {
         universityDtoRepository.update(universityDto);
     }
@@ -48,10 +65,20 @@ public class UniversityDtoService {
         universityDtoRepository.setRector(universityId, professorID);
     }
 
+    /**
+     *
+     * @param universityId
+     * @param professorID
+     */
     public void setFirstProRectorToUniversityDto(int universityId, int professorID) {
         universityDtoRepository.setFirstProRector(universityId, professorID);
     }
 
+    /**
+     *
+     * @param universityId
+     * @param professorID
+     */
     public void setSecondProRectorToUniversityDto(int universityId, int professorID) {
         universityDtoRepository.setSecondProRector(universityId,professorID);
     }
